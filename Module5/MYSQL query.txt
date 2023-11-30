@@ -1,0 +1,298 @@
+mysql> create table student(Rollno int auto_increment primary key,Name varchar(255),Branch varchar(255));
+
+mysql> show tables;
+
+mysql> create table Exam(Rollno int Not Null,S_code varchar(255),Marks int,P_code varchar(255));
+
+mysql> ALTER table Exam
+    -> ADD FOREIGN KEY(Rollno) REFERENCES
+    -> student(Rollno);
+insert into student(Name,Branch) values("Jay","Computer Science");
+insert into student(Name,Branch) values("Suhani","Electronic and Com"),("Kriti","Electronic and Com");
+
+mysql> select * from student;
++--------+--------+--------------------+
+| Rollno | Name   | Branch             |
++--------+--------+--------------------+
+|      1 | Jay    | Computer Science   |
+|      2 | Suhani | Electronic and Com |
+|      3 | Kriti  | Electronic and Com |
++--------+--------+-----------------------------+
+
+
+mysql> insert into Exam(Rollno,S_code,Marks,P_code) values(1,"CS11",50,"CS");
+Query OK, 1 row affected (0.02 sec)
+mysql> insert into Exam(Rollno,S_code,Marks,P_code) values(1,"CS12",60,"CS"),(2,"EC101",66,"EC"),(2,"EC102",70,"EC"),(3,"EC101",45,"EC"),(3,"EC102",50,"EC");
+Query OK, 5 rows affected (0.02 sec)
+mysql> select * from Exam;;
++--------+--------+-------+--------+
+| Rollno | S_code | Marks | P_code |
++--------+--------+-------+--------+
+|      1 | CS11   |    50 | CS     |
+|      1 | CS12   |    60 | CS     |
+|      2 | EC101  |    66 | EC     |
+|      2 | EC102  |    70 | EC     |
+|      3 | EC101  |    45 | EC     |
+|      3 | EC102  |    50 | EC     |
++--------+--------+-------+--------+
+
+mysql> create table Register(First_Name varchar(255),Last_Name varchar(255),Address varchar(255),City varchar(255),Age int);
+
+mysql> insert into Register(First_Name,Last_Name,Address,City,Age) values("Mickey","Mouse","123 Fantasy Way","Anaheim",73);
+
+mysql> insert into Register(First_Name,Last_Name,Address,City,Age) values("Bat","Man","321 Cavern Ave","Gotham",54),("Wonder","Woman","987 Truth Way","Paradise",39),("Donald","duck","555 Quack Street","Mallard",65),("Bugs","Bunny","567 Carrot Street","Rascal",58),("Wiley","Coyote","999 Acme Way","Canyon",61),("Cat","Woman","234 Purrfect Street","Hairball",32),("Tweety","Bird","543","Itotitaw",28);
+
+
+mysql> select * from Register;
++------------+-----------+---------------------+----------+------+
+| First_Name | Last_Name | Address             | City     | Age  |
++------------+-----------+---------------------+----------+------+
+| Mickey     | Mouse     | 123 Fantasy Way     | Anaheim  |   73 |
+| Bat        | Man       | 321 Cavern Ave      | Gotham   |   54 |
+| Wonder     | Woman     | 987 Truth Way       | Paradise |   39 |
+| Donald     | duck      | 555 Quack Street    | Mallard  |   65 |
+| Bugs       | Bunny     | 567 Carrot Street   | Rascal   |   58 |
+| Wiley      | Coyote    | 999 Acme Way        | Canyon   |   61 |
+| Cat        | Woman     | 234 Purrfect Street | Hairball |   32 |
+| Tweety     | Bird      | 543                 | Itotitaw |   28 |
++------------+-----------+---------------------+----------+------+
+8 rows in set (0.00 sec)
+
+mysql> create table employee(Employee_id int auto_increment primary key,First_name varchar(255),
+    -> Last_name varchar(255),
+    -> Salary int,
+    -> Joining_date datetime,
+    -> Department varchar(255));
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("John","Abraham",1000000,"2013-02-01 12:00:00","Banking");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("Michael","Clarke",800000,"2013-01-01 12:00:00","Insurance");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("Roy","Thomas",700000,"2013-02-01 12:00:00","Banking");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("Tom","Jose",600000,"2013-02-01 12:00:00","Insurance");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("Jerry","Pinto",650000,"2013-02-01 12:00:00","Insurance");
+Query OK, 1 row affected (0.04 sec)
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("Philip","Mathew",750000,"2013-01-01 12:00:00","Services");
+Query OK, 1 row affected (0.01 sec)
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("TestName1","123",650000,"2013-01-01 12:00:00","Services");
+Query OK, 1 row affected (0.03 sec)
+mysql> insert into employee(First_name,Last_name,Salary,Joining_date,Department)values("TestName2","Lname%",600000,"2013-02-01 12:00:00","Insurance");
+Query OK, 1 row affected (0.02 sec)
+mysql>select * from employee;
+Employee_id | First_name | Last_name | Salary  | Joining_date        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           2 | John       | Abraham   | 1000000 | 2023-11-27 11:42:33 | Banking    |
+|           3 | John       | Abraham   | 1000000 | 2013-02-01 12:00:00 | Banking    |
+|           4 | Michael    | Clarke    |  800000 | 2013-01-01 12:00:00 | Insurance  |
+|           5 | Roy        | Thomas    |  700000 | 2013-02-01 12:00:00 | Banking    |
+|           6 | Tom        | Jose      |  600000 | 2013-02-01 12:00:00 | Insurance  |
+|           7 | Jerry      | Pinto     |  650000 | 2013-02-01 12:00:00 | Insurance  |
+|           8 | Philip     | Mathew    |  750000 | 2013-01-01 12:00:00 | Services   |
+|           9 | TestName1  | 123       |  650000 | 2013-01-01 12:00:00 | Services   |
+|          10 | TestName2  | Lname%    |  600000 | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+9 rows in set (0.00 sec)
+
+
+
+mysql> insert into Incentive(Employee_id,Incentive_date,incentive_amount)values(3,"2013-02-01",5000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Incentive(Employee_id,Incentive_date,incentive_amount)values(4,"2013-02-01",3000),(5,"2013-02-01",4000),(3,"2013-01-01",4500),(4,"2013-01-01",3500);
+Query OK, 4 rows affected (0.02 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from Incentive;
++-------------+---------------------+------------------+
+| Employee_id | Incentive_date      | incentive_amount |
++-------------+---------------------+------------------+
+|           3 | 2013-02-01 00:00:00 |             5000 |
+|           4 | 2013-02-01 00:00:00 |             3000 |
+|           5 | 2013-02-01 00:00:00 |             4000 |
+|           3 | 2013-01-01 00:00:00 |             4500 |
+|           4 | 2013-01-01 00:00:00 |             3500 |
++-------------+---------------------+------------------+
+5 rows in set (0.00 sec)
+mysql> select First_name from employee where First_name="Tom";
++------------+
+| First_name |
++------------+
+| Tom        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select First_name,Joining_date,Salary from employee;
++------------+---------------------+---------+
+| First_name | Joining_date        | Salary  |
++------------+---------------------+---------+
+| John       | 2023-11-27 11:42:33 | 1000000 |
+| John       | 2013-02-01 12:00:00 | 1000000 |
+| Michael    | 2013-01-01 12:00:00 |  800000 |
+| Roy        | 2013-02-01 12:00:00 |  700000 |
+| Tom        | 2013-02-01 12:00:00 |  600000 |
+| Jerry      | 2013-02-01 12:00:00 |  650000 |
+| Philip     | 2013-01-01 12:00:00 |  750000 |
+| TestName1  | 2013-01-01 12:00:00 |  650000 |
+| TestName2  | 2013-02-01 12:00:00 |  600000 |
++------------+---------------------+---------+
+9 rows in set (0.00 sec)
+
+mysql> select * from employee  ORDER BY First_name ASC;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_date        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           7 | Jerry      | Pinto     |  650000 | 2013-02-01 12:00:00 | Insurance  |
+|           2 | John       | Abraham   | 1000000 | 2023-11-27 11:42:33 | Banking    |
+|           3 | John       | Abraham   | 1000000 | 2013-02-01 12:00:00 | Banking    |
+|           4 | Michael    | Clarke    |  800000 | 2013-01-01 12:00:00 | Insurance  |
+|           8 | Philip     | Mathew    |  750000 | 2013-01-01 12:00:00 | Services   |
+|           5 | Roy        | Thomas    |  700000 | 2013-02-01 12:00:00 | Banking    |
+|           9 | TestName1  | 123       |  650000 | 2013-01-01 12:00:00 | Services   |
+|          10 | TestName2  | Lname%    |  600000 | 2013-02-01 12:00:00 | Insurance  |
+|           6 | Tom        | Jose      |  600000 | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+9 rows in set (0.00 sec)
+
+mysql> select * from employee  ORDER BY Salary DESC;
++-------------+------------+-----------+---------+---------------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_date        | Department |
++-------------+------------+-----------+---------+---------------------+------------+
+|           2 | John       | Abraham   | 1000000 | 2023-11-27 11:42:33 | Banking    |
+|           3 | John       | Abraham   | 1000000 | 2013-02-01 12:00:00 | Banking    |
+|           4 | Michael    | Clarke    |  800000 | 2013-01-01 12:00:00 | Insurance  |
+|           8 | Philip     | Mathew    |  750000 | 2013-01-01 12:00:00 | Services   |
+|           5 | Roy        | Thomas    |  700000 | 2013-02-01 12:00:00 | Banking    |
+|           7 | Jerry      | Pinto     |  650000 | 2013-02-01 12:00:00 | Insurance  |
+|           9 | TestName1  | 123       |  650000 | 2013-01-01 12:00:00 | Services   |
+|           6 | Tom        | Jose      |  600000 | 2013-02-01 12:00:00 | Insurance  |
+|          10 | TestName2  | Lname%    |  600000 | 2013-02-01 12:00:00 | Insurance  |
++-------------+------------+-----------+---------+---------------------+------------+
+9 rows in set (0.00 sec)
+
+mysql>select employee.First_name,Incentive.incentive_amount from employee INNER JOIN Incentive ON employee.Employee_id=Incentive.Employee_id where incentive_amount > 3000;
++------------+------------------+
+| First_name | incentive_amount |
++------------+------------------+
+| John       |             5000 |
+| Roy        |             4000 |
+| John       |             4500 |
+| Michael    |             3500 |
++------------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> create table Salesperson(Sno int auto_increment primary key,Sname varchar(255),City varchar(255),Comm decimal(5,3))
+    -> ;
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> create table Customer(Cnm int auto_increment primary key,Cname varchar(255),City varchar(255),Rating int,Sno int NOT NULL);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> ALTER TABLE Customer
+    -> ADD FOREIGN KEY(Sno) REFERENCES
+    -> Salesperson(Sno);
+Query OK, 0 rows affected (0.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into Salesperson(Sno,Sname,City,Comm) values(1001,"Peel","London",0.12),(1002,"Serres","San Jose",0.13),(1004,"Motika","London",0.11),(1007,"Rafkin","Barcelona",0.15),(1003,"Axelrod","New York",0.1);
+Query OK, 5 rows affected (0.02 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from Salesperson;
++------+---------+-----------+-------+
+| Sno  | Sname   | City      | Comm  |
++------+---------+-----------+-------+
+| 1001 | Peel    | London    | 0.120 |
+| 1002 | Serres  | San Jose  | 0.130 |
+| 1003 | Axelrod | New York  | 0.100 |
+| 1004 | Motika  | London    | 0.110 |
+| 1007 | Rafkin  | Barcelona | 0.150 |
++------+---------+-----------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Customer(Cnm,Cname,City,Rating,Sno) values(201,"Hoffman","London",100,1001),(202,"Giovanne","Roe",200,1003),(203,"Liu","San Jose",300,1002),(204,"Grass","Barcelona",100,1002),(206,"Clemens","London",300,1007),(207,"Pereira","Roe",100,1004);
+Query OK, 6 rows affected (0.02 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select * from Customer;
++-----+----------+-----------+--------+------+
+| Cnm | Cname    | City      | Rating | Sno  |
++-----+----------+-----------+--------+------+
+| 201 | Hoffman  | London    |    100 | 1001 |
+| 202 | Giovanne | Roe       |    200 | 1003 |
+| 203 | Liu      | San Jose  |    300 | 1002 |
+| 204 | Grass    | Barcelona |    100 | 1002 |
+| 206 | Clemens  | London    |    300 | 1007 |
+| 207 | Pereira  | Roe       |    100 | 1004 |
++-----+----------+-----------+--------+------+
+6 rows in set (0.00 sec)
+
+mysql> select Sname,City from Salesperson where Comm >= 0.12 AND City="London";
++-------+--------+
+| Sname | City   |
++-------+--------+
+| Peel  | London |
++-------+--------+
+1 row in set (0.00 sec)
+mysql>select * from Salesperson where Comm > 0.10 and Comm < 0.12;
++------+--------+--------+-------+
+| Sno  | Sname  | City   | Comm  |
++------+--------+--------+-------+
+| 1004 | Motika | London | 0.110 |
++------+--------+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from Customer where Rating<=100 And City="Roe";
++-----+---------+------+--------+------+
+| Cnm | Cname   | City | Rating | Sno  |
++-----+---------+------+--------+------+
+| 207 | Pereira | Roe  |    100 | 1004 |
++-----+---------+------+--------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from Salesperson where City="Barcelona" OR City="London";
++------+--------+-----------+-------+
+| Sno  | Sname  | City      | Comm  |
++------+--------+-----------+-------+
+| 1001 | Peel   | London    | 0.120 |
+| 1004 | Motika | London    | 0.110 |
+| 1007 | Rafkin | Barcelona | 0.150 |
++------+--------+-----------+-------+
+3 rows in set (0.00 sec)
+
+
+----------------------------------------------------------
+Delimiter //
+create trigger T1
+After insert 
+ON employee for each row
+begin
+	IF new.Department is null then
+        insert into view(id,message)
+        values(new.id, concat('hi',new.Employee_id,'Please enter department'));
+	END IF;
+end; //  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

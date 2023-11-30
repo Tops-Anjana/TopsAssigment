@@ -1,0 +1,111 @@
+1)what do you understand by database:
+>A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).
+A DBMS is used to store data efficiently for an organization or an individual. The use of DBMS makes retrieval and management of data hassle-free. DBMS is needed in nearly every sector, be its banking, ticket reservation, hotel booking, or even online shopping.
+
+2) what is normalization?
+>Normalization is the process to eliminate data redundancy and enhance data integrity in the table. Normalization also helps to organize the data in the database. It is a multi-step process that sets the data into tabular form and removes the duplicated data from the relational tables.
+Normalization organizes the columns and tables of a database to ensure that database integrity constraints properly execute their dependencies.
+There are levels of Normalization
+1NF(First normal form)
+2NF(second normal form)
+3NF(Third normal form)
+Boyce-Codd Normal Form(BCNF)
+4NF(Fourth normal Form)
+5NF (Fith Normal Form)
+
+3) what is data redendency?
+>Data redundancy occurs when the same piece of data exists in multiple places, whereas data inconsistency is when the same data exists in different formats in multiple tables. Unfortunately, data redundancy can cause data inconsistency, which can provide a company with unreliable and/or meaningless information.
+
+4)difference between DBMS and RDBMS?
+> DBMS stands for Database Management System, and RDBMS is the acronym for the Relational Database Management system. In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
+>data elements need to access individually whereas in RDBMS multiple data elements can be acceesed at the same time.
+>there is no relation between data,but in rdbms data is stored in the form of tables which are related to each other.
+>normalization is not present.whereas in RDBMS it is there.
+>DBMS deals with small quantity of data.whereas RDBMS deal with large amount of data.
+
+5)what is E.F.Cod rule of RDBMS system?
+>Rule 0 − Foundation rule: it is used store and manage the data in its entire form.
+  Rule 1 − Rule of Information:It should store the data in the form of relation.be it any user defined or meta data it is important to store the value as an entity in the table cell.
+Rule 2 − Rule of Guaranteed Access:The use of pointer to access data is not possible. every data entity which is atomic in nature should be accessed only logically by using a right combination of the name of table,primary key represented by specific row value and column name represented by attribute value.
+Rule 3 − Rule of Systematic Null Value Support:It is completely supported in relational databases.they are independent of any datatype.
+Rule 4 − Rule of Active and online relational Catalog:metadata is the data about the database or the data about the data.the active online catalog that stores the metadata is called 'data dictionary.
+Rule 5 − Rule of Comprehensive Data Sub-language:It should be able to define integrity constraints,views,data manipulations,trasactions and authorizations.
+Rule 6 − Rule of Updating Views: views should reflect the updates of their respective base tables .views generally make the data readable but not modifiable.They help in data abstraction.
+Rule 7 − Rule of Set level insertion, update and deletion:  A single operation should be sufficient to retrieve, insert, update and delete the data.
+Rule 8 − Rule of Physical Data Independence: Batch and end user operations are logically separated from physical storage and respective access methods.
+Rule 9 − Rule of Logical Data Independence: Batch and end users can change the database schema without having to recreate it or recreate the applications built upon it.
+Rule 10 − Rule of Integrity Independence: Integrity constraints should be available and stored as metadata in data dictionary and not in the application programs.
+Rule 11 − Rule of Distribution Independence: The Data Manipulation Language of the relational system should not be concerned about the physical data storage and no alterations should be required if the physical data is centralized or distributed.
+Rule 12 − Rule of Non Subversion: Any row should obey the security and integrity constraints imposed. No special privileges are applicable.
+
+6)what is DDL Interpreter?
+ >DDL stand for Data Defination Language.It is a subset of SQL.
+List of DDL commands: 
+CREATE: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
+DROP: This command is used to delete objects from the database.
+ALTER: This is used to alter the structure of the database.
+TRUNCATE: This is used to remove all records from a table, including all spaces allocated for the records are removed.
+COMMENT: This is used to add comments to the data dictionary.
+RENAME: This is used to rename an object existing in the database.
+
+DQL (Data Query Language) 
+It is Used for performing quries on data within schema object.
+List of DQL: 
+SELECT: It is used to retrieve data from the database.
+
+DML(Data Manipulation Language)
+The SQL commands that deal with the manipulation of data present in the database belong to DML or Data Manipulation Language and this includes most of the SQL statements. It is the component of the SQL statement that controls access to data and to the database. Basically, DCL statements are grouped with DML statements.
+List of DML commands: 
+INSERT: It is used to insert data into a table.
+UPDATE: It is used to update existing data within a table.
+DELETE: It is used to delete records from a database table.
+LOCK: Table control concurrency.
+CALL: Call a PL/SQL or JAVA subprogram.
+
+DCL (Data Control Language)
+DCL includes commands such as GRANT and REVOKE which mainly deal with the rights, permissions, and other controls of the database system. 
+List of  DCL commands: 
+GRANT: This command gives users access privileges to the database.
+REVOKE: This command withdraws the user’s access privileges given by using the GRANT command
+TCL (Transaction Control Language)
+Transactions group a set of tasks into a single execution unit. Each transaction begins with a specific task and ends when all the tasks in the group are successfully completed
+List of  TCL commands:
+
+BEGIN: Opens a Transaction.
+COMMIT: Commits a Transaction.
+syntax:COMMIT;
+ROLLBACK: Rollbacks a transaction in case of any error occurs.
+syntax: ROLLBACK;
+SAVEPOINT: Sets a save point within a transaction.
+syntax: SAVEPOINT SAVEPOINT_NAME;
+
+7)what is SQL key Constraints writing an Example of SQL key Constraints?
+>> We have 5 types of key constraints in DBMS
+NOT NULL: ensures that the specified column doesn’t contain a NULL value.
+UNIQUE : provides a unique/distinct values to specified columns.
+DEFAULT: provides a default value to a column if none is specified.
+CHECK :checks for the predefined conditions before inserting the data inside the table.
+PRIMARY KEY: it uniquely identifies a row in a table.
+FOREIGN KEY: ensures referential integrity of the relationship
+Example:
+CREATE TABLE Customer(
+cust_id int NOT NULL,
+cust_phno int NOT NULL UNIQUE,
+order_id int,
+PRIMARY KEY(cust_id),
+FOREIGN KEY(order_id) REFERENCES Customer(order_id)
+);
+
+8)what is savepoint?how to create a save point write a query?
+>> savepoint is a named entity that represents the state of data and schemas at a particular point within a unit of work. You can create savepoints within or outside of a BEGIN...COMMIT.	
+syntax: SAVEPOINT;
+9) what is trigger and how to create a Trigger in SQL?
+>>An SQL trigger is a database object that is associated with a table and automatically executes a set of SQL statements when a specific event occurs on that table. Triggers are used to enforce business rules, maintain data integrity, and automate certain actions within a database.
+syntax:
+create trigger [trigger_name] 
+[before | after]  
+{insert | update | delete}  
+on [table_name]  
+[for each row]  
+[trigger_body] 
+

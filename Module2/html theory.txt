@@ -1,0 +1,21 @@
+Define:
+Website: A website is a collection of web pages and related content that is identified by a common domain name and published on at least one web server. 
+
+Webpage:A web page is a document written in hypertext (also known as HTML) that you can see online, using a web browser. Most web pages include text, photos or videos, and links to other web pages. A group of many web pages managed by one person or company is a website.
+
+Web browser:
+A web browser takes you anywhere on the internet. It retrieves information from other parts of the web and displays it on your desktop or mobile device. The information is transferred using the Hypertext Transfer Protocol, which defines how text, images and video are transmitted on the web.
+Web Server:
+ a web server is a computer that stores web server software and a website's component files (for example, HTML documents, images, CSS stylesheets, and JavaScript files). A web server connects to the Internet and supports physical data interchange with other devices connected to the web.
+HTML:
+HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+CSS:
+CSS is the language we use to style an HTML document.
+CSS describes how HTML elements should be displayed.
+
+>In how many ways can a CSS be intergrated as a web page?
+>>There  are 3 ways to integrate CSS in a web page:
+1.Inline CSS
+2.Internal CSS
+3.External CSS
+

@@ -1,0 +1,50 @@
+1)what is software?what is softwareengineering?
+> Software is a program or set of programs containing instructions that provide desired functionality. And Engineering is the process of designing and building something that serves a particular purpose and finds a cost-effective solution to problems.  
+Software Engineering is the process of designing, developing, testing, and maintaining software. It is a systematic and disciplined approach to software development that aims to create high-quality, reliable, and maintainable software. Software engineering includes a variety of techniques, tools, and methodologies, including requirements analysis, design, testing, and maintenance.
+2) Explain types of software?
+> there are two types of software:
+  1.System Software->Operating System
+		->Language Processor
+		->Device Driver
+  2.Application Software->General Purpose Software
+		     ->Customize Software
+		     ->Utility Software
+System Software:
+System software is software that directly operates the computer hardware and provides the basic functionality to the users as well as to the other software to operate smoothly. Or in other words, system software basically controls a computer’s internal functioning and also controls hardware devices such as monitors, printers, and storage devices, etc. It is like an interface between hardware and user applications, it helps them to communicate with each other because hardware understands machine language(i.e. 1 or 0) whereas user applications are work in human-readable languages like English, Hindi, German, etc. so system software converts the human-readable language into machine language and vice versa.
+Application Software:
+Software that performs special functions or provides functions that are much more than the basic operation of the computer is known as application software. Or in other words, application software is designed to perform a specific task for end-users. It is a product or a program that is designed only to fulfill end-users’ requirements. It includes word processors, spreadsheets, database management, inventory, payroll programs, etc.
+
+3) what is SDLC? explain each phase of SDLC?
+> SDLC (Software Development Life Cycle) is used in Every Software Development Company because it is the root of the Development Cycle, if that model would not exist in the world, firstly no software can build secondly if any how it would be made, it’s not going to succeed it has no use, because of no maintenance.
+To provide a structured and organized approach to software development: The SDLC provides a framework for managing the software development process, which helps to ensure that all necessary steps are taken and that the final product meets the requirements.
+
+The SDLC typically includes the following phases:
+1. Requirements gathering and analysis: This phase involves gathering information about the software requirements from stakeholders, such as customers, end-users, and business analysts.
+
+2. Design: In this phase, the software design is created, which includes the overall architecture of the software, data structures, and interfaces. It has two steps:
+
+High-level design (HLD): It gives the architecture of software products.
+Low-level design (LLD): It describes how each and every feature in the product should work and every component.
+3. Implementation or coding: The design is then implemented in code, usually in several iterations, and this phase is also called as Development.
+things you need to know about this phase:
+This is the longest phase in SDLC model.
+This phase consists of Front end + Middleware + Back-end.
+In front-end: Development of coding is done even SEO settings are done.
+In Middleware: They connect both the front end and back end.
+In the back-end: A database is created.
+4. Testing: The software is thoroughly tested to ensure that it meets the requirements and works correctly.
+
+5. Deployment: After successful testing, The software is deployed to a production environment and made available to end-users.
+
+ 6. Maintenance: This phase includes ongoing support, bug fixes, and updates to the software.
+
+4) what is DFD? create a DFD diagram on Flipkart.
+>A data flow diagram (DFD) is a visual representation of the information flow through a process or system. DFDs help you better understand process or system operations to discover potential problems, improve efficiency, and develop better processes.
+
+5)what is flowchart?Create a flowchart to make addition of two numbers.
+>A flowchart is a picture of the separate steps of a process in sequential order. It is a generic tool that can be adapted for a wide variety of purposes, and can be used to describe various processes, such as a manufacturing process, an administrative or service process, or a project plan.
+
+6)what is use case diagram? create a use case on bill payment on paytm.
+>A use case is a written description of how users will perform tasks on your website. It outlines, from a user's point of view, a system's behavior as it responds to a request. Each use case is represented as a sequence of simple steps, beginning with a user's goal and ending when that goal is fulfilled.
+
+

@@ -1,0 +1,15 @@
+body{
+color:blue;
+}
+h1{
+color:red;
+}
+a:link{
+color:#ff0000;
+}
+a:hover{
+color:green;
+}
+a:active{
+color:aqua;
+}
