@@ -15,7 +15,6 @@ class cricketer{
 class batsman :public cricketer{
      public:
      int totalrun,avgrun,match,avg;
-     char perform;
      public:
      int getdata(){
         cout<<"total number of matches played:";
